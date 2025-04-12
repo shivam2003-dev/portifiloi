@@ -22,31 +22,32 @@ A clean, minimalist portfolio website built for showcasing DevOps engineering sk
 
 ## Deployment to GitHub Pages
 
-To deploy this portfolio to GitHub Pages:
+1. Create a new repository on GitHub named `shivam-devops-showcase`
 
-1. Create a GitHub repository for your portfolio
-2. Configure your project for GitHub Pages:
-
+2. Initialize the repository and push your code:
 ```sh
-# Install gh-pages package
-npm install --save-dev gh-pages
-
-# Add these scripts to package.json
-# "predeploy": "npm run build",
-# "deploy": "gh-pages -d dist"
+git init
+git add .
+git commit -m "Initial commit"
+git branch -M main
+git remote add origin https://github.com/YOUR_USERNAME/shivam-devops-showcase.git
+git push -u origin main
 ```
 
-3. Add homepage field to package.json:
-```json
-"homepage": "https://yourusername.github.io/your-repo-name"
-```
-
-4. Deploy the site:
+3. Deploy to GitHub Pages:
 ```sh
+# The package is already installed
+npm run build
 npm run deploy
 ```
 
-5. Configure GitHub Pages in your repository settings to use the gh-pages branch
+4. Go to your repository settings on GitHub:
+   - Navigate to Settings > Pages
+   - In the "Build and deployment" section, select "Deploy from a branch"
+   - Select the "gh-pages" branch and "/ (root)" folder
+   - Click Save
+
+5. Your site will be available at: `https://YOUR_USERNAME.github.io/shivam-devops-showcase`
 
 ## Local Development
 
@@ -74,4 +75,3 @@ The site content can be customized by editing the appropriate components:
 
 ## License
 MIT
-
